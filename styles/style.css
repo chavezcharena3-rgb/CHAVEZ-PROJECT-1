@@ -229,18 +229,33 @@ section h2::after {
     margin: 12px auto 0;
 }
 
-/* ABOUT */
+
+/* ABOUT SECTION */
 
 #about {
     background: var(--secondary);
     text-align: center;
+    position: relative;
 }
 
 #about p {
     max-width: 800px;
-    margin: 15px auto;
+    margin: 18px auto;
+    padding: 22px 28px;
     color: var(--muted);
     font-size: 15px;
+    line-height: 1.9;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+#about p:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(180, 105, 135, 0.15);
 }
 
 /* SKILLS */
