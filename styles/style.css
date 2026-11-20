@@ -646,3 +646,55 @@ section {
         transition-duration: 0.01ms !important;
     }
 }
+/* FINAL RESPONSIVE DESIGN POLISH */
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+    }
+
+    .projects-container,
+    .skills-grid {
+        gap: 18px;
+    }
+
+    section:not(.hero) {
+        padding: 55px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 15px 4%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .contact-card {
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .contact-icon {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
