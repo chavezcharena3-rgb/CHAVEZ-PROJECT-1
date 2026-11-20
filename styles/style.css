@@ -65,6 +65,7 @@ nav ul {
 }
 
 nav ul li a {
+    position: relative;
     text-decoration: none;
     color: var(--text);
     font-size: 14px;
@@ -72,8 +73,25 @@ nav ul li a {
     transition: 0.3s;
 }
 
+/* NAVIGATION HOVER ANIMATION */
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
 nav ul li a:hover {
     color: var(--primary-dark);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* HERO SECTION */
@@ -313,7 +331,6 @@ footer {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
         gap: 15px;
@@ -363,7 +380,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
     nav ul {
         gap: 10px;
     }
